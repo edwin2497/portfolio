@@ -1,6 +1,6 @@
-import { CSSProperties } from "react";
+import { IStyle } from "types";
 
-export const STYLES: { [key: string]: CSSProperties } = {
+export const STYLES: IStyle = {
   APP_BAR: {
     height: "80px",
     padding: "32px",
