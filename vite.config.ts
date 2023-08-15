@@ -7,6 +7,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
+      types: path.resolve("src/types"),
+      hooks: path.resolve("src/hooks"),
       const: path.resolve("src/const"),
       assets: path.resolve("src/assets"),
       components: path.resolve("src/components"),

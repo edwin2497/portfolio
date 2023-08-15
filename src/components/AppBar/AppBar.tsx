@@ -1,21 +1,23 @@
-import { ROUTES } from "const";
 import { STYLES } from "./styles";
+import { MenuIcon } from "assets";
 import { ReactElement } from "react";
-import { IconButton, Link } from "components";
+import { useScreenSize } from "hooks";
+import { ROUTES, SCREEN_SIZE } from "const";
+import { IconButton, Links } from "components";
 
 export const AppBar = (): ReactElement => {
+  const { width } = useScreenSize();
+
   return (
     <div style={STYLES.APP_BAR}>
-      {ROUTES.map((route) => (
-        <Link
-          key={route.ID}
-          to={route.TO}
-          style={STYLES.LINKS}
-          name={route.NAME}
+      {width >= SCREEN_SIZE.TABLET ? (
+        <Links routes={ROUTES} style={STYLES.LINKS} />
+      ) : (
+        <IconButton
+          onClick={() => {}}
+          icon={<MenuIcon width={35} height={35} fill="#66FCF1" />}
         />
-      ))}
-      
-      <IconButton />
+      )}
     </div>
   );
 };

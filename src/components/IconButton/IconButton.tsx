@@ -1,12 +1,14 @@
 import { STYLES } from "./styles";
-import { MenuIcon } from "assets";
 import { ReactElement } from "react";
+import { IIconButtonProps } from "components";
 
-
-export const IconButton = (): ReactElement => {
+export const IconButton = ({
+  icon,
+  onClick,
+}: IIconButtonProps): ReactElement => {
   return (
-    <button style={STYLES.BUTTON}>
-      <span style={STYLES.ICON}>{<MenuIcon/>}</span>
+    <button style={STYLES.BUTTON} onClick={onClick}>
+      <span>{icon}</span>
     </button>
   );
 };
