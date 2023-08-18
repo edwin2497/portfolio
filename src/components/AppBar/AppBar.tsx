@@ -1,22 +1,18 @@
-import { STYLES } from "./styles";
-import { MenuIcon } from "assets";
+import "./styles.css";
 import { ReactElement } from "react";
 import { useScreenSize } from "hooks";
 import { ROUTES, SCREEN_SIZE } from "const";
-import { IconButton, Links } from "components";
+import { Menu, Links, IAppBarProps } from "components";
 
-export const AppBar = (): ReactElement => {
+export const AppBar = ({ open, handleOpen }: IAppBarProps): ReactElement => {
   const { width } = useScreenSize();
 
   return (
-    <div style={STYLES.APP_BAR}>
+    <div className="app-bar">
       {width >= SCREEN_SIZE.TABLET ? (
-        <Links routes={ROUTES} style={STYLES.LINKS} />
+        <Links routes={ROUTES} />
       ) : (
-        <IconButton
-          onClick={() => {}}
-          icon={<MenuIcon width={35} height={35} fill="#66FCF1" />}
-        />
+        <Menu open={open} handleOpen={handleOpen} />
       )}
     </div>
   );
