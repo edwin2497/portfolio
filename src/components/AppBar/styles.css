@@ -1,0 +1,15 @@
+.app-bar {
+  height: 80px;
+  display: flex;
+  margin: 0px 34px;
+  align-items: center;
+  justify-content: right;
+}
+
+.app-bar > a {
+  margin: 0 10px;
+  font-size: 20px;
+  color: #66fcf1;
+  font-weight: bold;
+  text-decoration: none;
+}
