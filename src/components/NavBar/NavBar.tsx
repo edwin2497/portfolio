@@ -1,7 +1,5 @@
-import { ChangeEvent, MouseEvent, ReactElement, useState } from "react";
-import { ThemSwitch } from "components";
+import { MouseEvent, ReactElement, useState } from "react";
 import { AppBar, Box } from "@mui/material";
-import { useColorScheme } from "@mui/material/styles";
 import { MenuOptions } from "./components";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -11,8 +9,6 @@ import Container from "@mui/material/Container";
 import { ROUTES } from "const";
 
 export const NavBar = (): ReactElement => {
-  // const { mode, setMode } = useColorScheme();
-
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>): void => {
@@ -22,11 +18,6 @@ export const NavBar = (): ReactElement => {
   const handleCloseNavMenu = (): void => {
     setAnchorElNav(null);
   };
-
-  // const handleThemeChange = (event: ChangeEvent<HTMLInputElement>) => {
-  //   const theme = event.target.checked ? "dark" : "light";
-  //   setMode(theme);
-  // };
 
   return (
     <AppBar position="static">

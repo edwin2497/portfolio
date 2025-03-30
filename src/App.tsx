@@ -5,9 +5,6 @@ import { About, Contact, Home } from "pages";
 
 const App = () => {
   const theme = createTheme({
-    // colorSchemes: {
-    //   dark: true
-    // },
     palette: {
       primary: {
         main: "#1F2833",
@@ -29,7 +26,7 @@ const App = () => {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About/>} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
