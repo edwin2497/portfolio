@@ -1,28 +1,40 @@
-import { AppBar } from "components";
-import { useState, useMemo } from "react";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Footer, NavBar } from "components";
+import { About, Contact, Home } from "pages";
 
 const App = () => {
-  const [open, setOpen] = useState<boolean>(false);
-
-  const handleOpen = useMemo(() => {
-    return () => {
-      setOpen(!open);
-    };
-  }, [open]);
+  const theme = createTheme({
+    // colorSchemes: {
+    //   dark: true
+    // },
+    palette: {
+      primary: {
+        main: "#1F2833",
+      },
+      background: {
+        default: "#0B0C10",
+        paper: "#1F2833",
+      },
+      text: {
+        primary: "#66FCF1",
+        secondary: "#C5C6C7",
+      },
+    },
+  });
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <AppBar open={open} handleOpen={handleOpen} />
+        <NavBar />
         <Routes>
-          <Route path="/" element={<></>} />
-          <Route path="/about" element={<></>} />
-          <Route path="/contact" element={<></>} />
-          <Route path="/projects" element={<></>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
-    </>
+    </ThemeProvider>
   );
 };
 

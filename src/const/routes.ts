@@ -1,6 +1,5 @@
-export const ROUTES: { id: string; to: string; name: string }[] = [
-  { id: "home", to: "/", name: "Home" },
-  { id: "projects", to: "/projects", name: "Projects" },
-  { id: "about", to: "/about", name: "About" },
-  { id: "contact", to: "/contact", name: "Contact" },
+export const ROUTES: { id: string; to: string; label: string }[] = [
+  { id: "home", to: "/", label: "Home" },
+  { id: "about", to: "/about", label: "About" },
+  { id: "contact", to: "/contact", label: "Contact" },
 ];
