@@ -7,45 +7,40 @@ export const Footer = (): ReactElement => {
   return (
     <Container
       sx={{
-        backgroundColor: "background.default", // Use the default background color from the theme
+        backgroundColor: "background.paper",
         display: "flex",
-        flexDirection: "column",
+        flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        height: "100px",
+        height: "64px",
       }}
       maxWidth={false}
     >
       <Typography
-        variant="h6"
         sx={{
-          color: "text.secondary", // Use the primary text color from the theme
+          color: "text.secondary",
+          paddingRight: "6px",
         }}
       >
         {FOOTER.TITLE}
-        <Link
-          to="https://github.com/edwin2497"
-          style={{ textDecoration: "none", color: "grey" }}
-        >
-          <Typography
-            variant="h6"
-            sx={{
-              display: "inline",
-              color: "text.primary", // Use the primary text color from the theme
-              lineHeight: "1.5",
-            }}
-          >
-            {FOOTER.DESCRIPTION}
-          </Typography>
-        </Link>
+      </Typography>
+      <Typography
+        variant="body1"
+        sx={{
+          display: "inline",
+          color: "text.primary",
+          lineHeight: "1.5",
+          paddingRight: "8px",
+        }}
+      >
+        {FOOTER.DESCRIPTION}
       </Typography>
       <Box
         sx={{
           display: "flex",
-          flexDirection: "column",
+          flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
-          paddingTop: "24px",
         }}
       >
         <Grid container spacing={2}>
