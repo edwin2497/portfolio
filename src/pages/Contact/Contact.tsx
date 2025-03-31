@@ -1,17 +1,25 @@
 import { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import { Box, Button, Container, Typography } from "@mui/material";
+import ResumeEdwinLeon from "assets/ResumeEdwinLeon.pdf";
 import { CONTACT } from "const";
 
 export const Contact = (): ReactElement => {
-  const handleDownloadClick = () => {};
+  const handleDownloadClick = (): void => {
+    const link = document.createElement("a");
+    link.href = ResumeEdwinLeon;
+    link.setAttribute("download", "Resume Edwin Leon"); // Set the filename for download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <Container
-      maxWidth={false} // Disable the default maxWidth behavior
+      maxWidth={false}
       sx={{
-        backgroundColor: "background.default", // Use the default background color from the theme
-        height: "calc(100vh - 164px)", // 164px is the height of the NavBar and Footer combined'
+        backgroundColor: "background.default",
+        height: "calc(100vh - 128px)", // 128px is the height of the NavBar and Footer combined'
         margin: "0",
         padding: "0",
       }}
@@ -23,14 +31,14 @@ export const Contact = (): ReactElement => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "calc(100vh - 164px)", // 164px is the height of the NavBar and Footer combined'
+          minHeight: "calc(100vh - 128px)", // 128px is the height of the NavBar and Footer combined'
         }}
       >
         <Typography
           variant="h3"
           gutterBottom
           sx={{
-            color: "text.primary", // Use the primary text color from the theme
+            color: "text.primary",
           }}
         >
           {CONTACT.TITLE}
@@ -38,7 +46,7 @@ export const Contact = (): ReactElement => {
         <Typography
           variant="h6"
           sx={{
-            color: "text.secondary", // Use the secondary text color from the theme
+            color: "text.secondary",
           }}
         >
           {CONTACT.DESCRIPTION}
@@ -60,7 +68,7 @@ export const Contact = (): ReactElement => {
             >
               <item.icon
                 sx={{
-                  color: "text.primary", // Use the primary text color from the theme
+                  color: "text.primary",
                 }}
               />
             </Link>
@@ -75,8 +83,8 @@ export const Contact = (): ReactElement => {
             variant="outlined"
             onClick={handleDownloadClick}
             sx={{
-              backgroundColor: "primary.main", // Use the primary color from the theme
-              color: "text.primary", // Use the primary text color from the theme
+              backgroundColor: "primary.main",
+              color: "text.primary",
               textTransform: "unset",
             }}
           >

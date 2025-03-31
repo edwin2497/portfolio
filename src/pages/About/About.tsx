@@ -7,8 +7,8 @@ export const About = (): ReactElement => {
     <Container
       maxWidth={false} // Disable the default maxWidth behavior
       sx={{
-        backgroundColor: "background.default", // Use the default background color from the theme
-        height: "calc(100vh - 164px)", // 164px is the height of the NavBar and Footer combined'
+        backgroundColor: "background.default",
+        height: "calc(100vh - 128px)", // 128px is the height of the NavBar and Footer combined'
         margin: "0",
         padding: "0",
       }}
@@ -20,14 +20,14 @@ export const About = (): ReactElement => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "calc(100vh - 164px)", // 164px is the height of the NavBar and Footer combined'
+          minHeight: "calc(100vh - 128px)", // 128px is the height of the NavBar and Footer combined'
         }}
       >
         <Typography
           variant="h3"
           gutterBottom
           sx={{
-            color: "text.primary", // Use the primary text color from the theme
+            color: "text.primary",
           }}
         >
           {ABOUT.TITLE}
@@ -35,7 +35,7 @@ export const About = (): ReactElement => {
         <Typography
           variant="h6"
           sx={{
-            color: "text.secondary", // Use the secondary text color from the theme
+            color: "text.secondary",
           }}
         >
           {ABOUT.DESCRIPTION}
