@@ -2,7 +2,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Footer, NavBar } from "components";
 import { About, Contact, Home } from "pages";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const theme = createTheme({
