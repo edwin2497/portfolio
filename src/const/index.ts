@@ -4,3 +4,4 @@ export * from "./footer";
 export * from "./projects";
 export * from "./routes";
 export * from "./social";
+export * from "./technologies";

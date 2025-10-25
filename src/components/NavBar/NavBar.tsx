@@ -22,7 +22,12 @@ export const NavBar = (): ReactElement => {
   return (
     <AppBar position="static">
       <Container maxWidth={false}>
-        <Toolbar disableGutters>
+        <Toolbar
+          disableGutters
+          sx={{
+            minHeight: { xs: 64, md: 64 },
+          }}
+        >
           <Box
             sx={{
               flexGrow: 1,

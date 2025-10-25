@@ -927,7 +927,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/icons-material@npm:^7.0.1":
+"@mui/icons-material@npm:7.0.1":
   version: 7.0.1
   resolution: "@mui/icons-material@npm:7.0.1"
   dependencies:
@@ -3285,7 +3285,7 @@ __metadata:
   dependencies:
     "@emotion/react": 11.14.0
     "@emotion/styled": 11.14.0
-    "@mui/icons-material": ^7.0.1
+    "@mui/icons-material": 7.0.1
     "@mui/material": 7.0.1
     "@types/node": 20.5.0
     "@types/react": 19.0.12
